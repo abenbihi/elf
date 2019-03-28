@@ -1,0 +1,13 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
+IF(COMMAND CMAKE_POLICY)
+  CMAKE_POLICY(SET CMP0003 NEW)
+ENDIF(COMMAND CMAKE_POLICY)
+
+
+set(PROJECT_NAME "Lib and Demo")
+project(${PROJECT_NAME})
+
+add_subdirectory (Lib)
+add_subdirectory (Demo)
+add_subdirectory (Webcam)
+add_subdirectory (HPatch)

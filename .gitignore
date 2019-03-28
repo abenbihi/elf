@@ -1,0 +1,8 @@
+*pyc
+*~
+datasets/*
+res/*
+methods/tilde/c++/build/*
+*o
+*so
+*a

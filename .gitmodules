@@ -1,0 +1,6 @@
+[submodule "methods/lift/tf-lift"]
+	path = methods/lift/tf-lift
+	url = https://github.com/ELF-det/tf-lift.git
+[submodule "methods/lfnet/lf-net-release"]
+	path = methods/lfnet/lf-net-release
+	url = https://github.com/ELF-det/lf-net-release.git
