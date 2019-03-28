@@ -1,0 +1,12 @@
+conv2_1/conv2d/kernel
+conv2_1/conv2d/bias
+conv2_2/conv2d/kernel
+conv2_2/conv2d/bias
+conv4_1/conv2d/kernel
+conv4_1/conv2d/bias
+conv4_2/conv2d/kernel
+conv4_2/conv2d/bias
+conv5_1/conv2d/kernel
+conv5_1/conv2d/bias
+conv5_2/conv2d/kernel
+conv5_2/conv2d/bias

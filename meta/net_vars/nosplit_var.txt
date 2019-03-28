@@ -1,0 +1,10 @@
+conv1/conv2d/kernel
+conv1/conv2d/bias
+conv3/conv2d/kernel
+conv3/conv2d/bias
+fc6/dense/kernel
+fc6/dense/bias
+fc7/dense/kernel
+fc7/dense/bias
+fc8/dense/kernel
+fc8/dense/bias
