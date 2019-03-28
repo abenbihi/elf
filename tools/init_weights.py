@@ -39,8 +39,12 @@ def restore_vgg(sess, path):
 
 def restore_alexnet(sess, path):
     print('Weights initialization ...')
-    caffe_weights_fn = path 
-    caffe_weights = np.load(caffe_weights_fn).item()
+    caffe_weights_fn = path
+    if sys.version_info[0] >= 3:
+        caffe_weights = np.load(caffe_weights_fn, encoding = 'latin1').item() # fuck pickles
+    else:
+        caffe_weights = np.load(caffe_weights_fn).item()
+
     var_to_restore = []
     nosplit_list = [l.split("\n")[0] for l in open('meta/net_vars/nosplit_var.txt').readlines()]
     split_list = [l.split("\n")[0] for l in open('meta/net_vars/split_var.txt').readlines()]

@@ -81,9 +81,11 @@ with tf.Graph().as_default():
         if args.model=='vgg' or args.model=='alexnet':
             restore(sess, 'meta/weights/%s/data.ckpt'%args.model)
         elif args.model=='xception':
-            log_dir = 'meta/weights/xception/'
+            saver = tf.train.Saver(tf.trainable_variables())
+            log_dir = '/home/ws/meta/weights/xception/'
             ckpt = tf.train.get_checkpoint_state(log_dir)
             if ckpt and ckpt.model_checkpoint_path:
+                #print(ckpt.model_checkpoint_path)
                 saver.restore(sess, ckpt.model_checkpoint_path)
                 global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
             else:
@@ -136,7 +138,7 @@ with tf.Graph().as_default():
                         f.write('ms:%.3f - N1:%d - N2:%d - M:%d - M_d:%d - inter:%d\n'
                                 %(0, 0, 0, 0, 0, 0))
                     print('goto next scene')
-                    break # goto next scene
+                    continue # goto next scene
                
                 if args.save2txt:
                     out_dir = os.path.join(res_dir, scene_name)

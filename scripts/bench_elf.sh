@@ -31,6 +31,17 @@ else
   mkdir -p "$log_dir"
 fi
 
+# vgg 
+feat_name=pool4
+grad_name=pool2
+
+## alexnet 
+#feat_name=pool2
+#grad_name=pool1
+
+## xception 
+feat_name=b4
+grad_name=b2_conv1
 
 # my perf
 python3 -m methods.elf_vgg."$data" \
@@ -40,13 +51,13 @@ python3 -m methods.elf_vgg."$data" \
   --border_remove 10 \
   --max_num_feat 500 \
   --trial "$trials" \
-  --grad_name pool2 \
-  --feat_name pool3 \
-  --thr_k_size 17 \
-  --thr_sigma 6 \
-  --noise_k_size 5 \
-  --noise_sigma 4 \
-  --model vgg \
+  --grad_name "$grad_name" \
+  --feat_name "$feat_name" \
+  --thr_k_size 5 \
+  --thr_sigma 4 \
+  --noise_k_size 9 \
+  --noise_sigma 3 \
+  --model xception \
   --resize 1
 
 

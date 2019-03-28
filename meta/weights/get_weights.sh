@@ -22,7 +22,7 @@ filename=alexnet/data.ckpt
 gdrive_download "$fileid" "$filename"
 
 # xception
-fileid=1RxnNVsHhJ__x4owJ1-6FCii2SLU_Y6K3
+fileid=1bljfpxrOVZAeLyif5tpVussf_0YDgcXB
 filename=xception.tar.gz
 gdrive_download "$fileid" "$filename"
 tar -xvzf "$filename"

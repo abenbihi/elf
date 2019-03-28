@@ -7,10 +7,6 @@ DEBUG   = (0==1)
 WS_DIR = '/home/ws/'
 WEIGHT_DIR = '%s/meta/weights/'%WS_DIR
 
-
-MODEL='vgg'
-TRAIN_LOG_DIR='log/feat/xp7/train' # alexnet, triplet loss, lake
-
 NEW_SIZE = (640,480)
 GLOBAL_TIME = True
 MIN_MATCH_COUNT = 10 # min num of descriptor matching for H estimation
@@ -27,7 +23,7 @@ if DATA=='hpatches':
     HP_LIST = 'meta/list/img_hp.txt'
     MAX_IMG_NUM = 6 # number of img per scene to process
     IMG_EXT = 'ppm'
-    SCENE_LIST = [l.split("\n")[0] for l in open(HP_LIST).readlines() ][:10]
+    SCENE_LIST = [l.split("\n")[0] for l in open(HP_LIST).readlines() ]
 elif DATA=='hpatches_rot':
     DATA_DIR = '%s/datasets/hpatches_rot/'%WS_DIR
     HP_LIST = 'meta/list/img_hp.txt'
@@ -40,11 +36,9 @@ elif DATA=='hpatches_s':
     IMG_EXT = 'ppm'
 elif DATA=='strecha':
     DATA_DIR = '%s/datasets/strecha/'%WS_DIR
-    #COLMAP_DIR = '%s/datasets/colmap/'%WS_DIR
     SCENE_LIST = ['fountain', 'castle_entry','herzjesu'] 
 elif DATA=='webcam':
-    #SCENE_LIST = ['Chamonix', 'Courbevoie', 'Frankfurt', 'Mexico', 'Panorama', 'StLouis']
-    SCENE_LIST = ['Chamonix']
+    SCENE_LIST = ['Chamonix', 'Courbevoie', 'Frankfurt', 'Mexico', 'Panorama', 'StLouis']
     DATA_DIR = '%s/datasets/WebcamRelease'%WS_DIR
 else:
     print('Error: unknown dataset: %s. Set DATA correctly in tools/cst.py.'%DATA)
