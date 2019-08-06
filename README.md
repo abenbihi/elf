@@ -1,7 +1,29 @@
-# ELF-Det
-Appendix code to reproduce the paper results.
 
-General structure: 
+Code to reproduce the results of the paper
+[ELF: Embedded Localisation of Features in Pre-Trained CNN ICCV19](https://arxiv.org/pdf/1907.03261.pdf)
+
+
+# Reference
+If you use this code, please cite the following paper:
+
+
+Assia Benbihi, Matthieu Geist, Cédric Pradalier
+"ELF: Embedded Localisation of Features in Pre-Trained CNN" Proc. ICCV (2019)
+
+```
+@InProceedings{Benbihi_2019_ICCV,
+  author={Benbihi, Assia and Geist, Matthieu and Pradalier, C{\'e}dric},
+  title={ELF: Embedded Localisation of Features in Pre-Trained CNN},
+  booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+  month = {June},
+  year = {2019}
+}
+```
+
+
+
+# Repo structure
+
 - datasets: datasets used in the paper
 - docker: tools to build the docker img
 - meta: network weights, misc. files
@@ -16,7 +38,7 @@ General structure:
 - tools: metrics code, misc. functions used by elf
    
 
-        git clone --recursive https://github.com/ELF-det/elf.git
+        git clone --recursive https://github.com/abenbihi/elf.git
 
 # Installation
 We recommend using docker to have an image with all the dependencies. 
