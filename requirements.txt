@@ -1,5 +1,5 @@
 opencv-python==3.4.0.14
-opencv-contrib-python==3.4.2.17
+opencv-contrib-python==3.4.7.28
 tensorflow_gpu==1.4.0
 matplotlib
 scikit-learn
