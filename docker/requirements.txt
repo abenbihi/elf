@@ -2,7 +2,7 @@ tensorflow-gpu==1.4.0
 keras==2.1.3
 keras_applications==1.0.7
 opencv-python==3.4.0.14
-opencv-contrib-python==3.4.2.17
+opencv-contrib-python==4.2.0.32
 matplotlib
 scikit-learn
 torch==0.4.1
